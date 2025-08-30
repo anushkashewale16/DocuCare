@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuCare - Healthy Living</title>
+    <!-- Use the Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* General body styling for the font family */
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background-color: #f8fafc;
+        }
+
+        /* Keyframes for the pulse animation on the logo */
+        @keyframes pulse {
+            0% {
+                transform: scale(1.1);
+            }
+            50% {
+                transform: scale(1.15);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQqG9g6vGqU2P0zP0E9O9uP2zI7aN6j1iW6d+13s4+8A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-slate-100 text-gray-800">
+
+    <!-- Message box for notifications -->
+    <div id="messageBox" class="fixed top-5 left-1/2 -translate-x-1/2 z-[1000] p-4 rounded-xl shadow-lg transition-all duration-300 ease-in-out hidden bg-white text-gray-800"></div>
+
+    <!-- Main navigation header now fully transparent and fixed -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-transparent py-4 px-4 md:px-10 flex justify-between items-center flex-wrap gap-4 transition-transform duration-500 ease-in-out transform">
+
+        <a href="#" class="text-2xl font-bold text-[#25a15d] flex items-center gap-2 transition duration-300 hover:text-[#14a79c] hover:scale-110">
+            <span class="text-4xl leading-none text-[#004b7c]">+</span>
+            DocuCare
+        </a>
+        <nav class="hidden md:block">
+            <ul class="flex list-none m-0 p-0 gap-6">
+                <li><a href="#" class="text-white hover:text-gray-200 font-medium transition duration-300">Home</a></li>
+                <li><a href="#about-us-section" class="text-white hover:text-gray-200 font-medium transition duration-300">About Us</a></li>
+                <li><a href="#" class="text-white hover:text-gray-200 font-medium transition duration-300">News</a></li>
+                <li><a href="#contact-section" class="text-white hover:text-gray-200 font-medium transition duration-300">Contact</a></li>
+            </ul>
+        </nav>
+       <button type="button" 
+        onclick="window.location.href='login.html'" 
+        class="px-6 py-3 bg-[#004b7c] text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-105">
+         Login
+         </button>
+    </header>
+
+
+    <!-- Hero section with a solid background -->
+    <section class="relative flex justify-center items-center text-center h-screen md:h-[80vh] bg-[url('new-image1.jpg')] bg-cover bg-center bg-no-repeat">
+    <!-- A dark overlay to improve text visibility on the image -->
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="px-5 py-10 relative z-10">
+    
+     <!-- Text color changed to white for better contrast with the background image -->
+     <h1 class="text-6xl md:text-8xl font-extrabold text-white mb-4 leading-tight">Your Health, Our Priority </h1>
+     <h2 class="text-xl md:text-2xl font-light text-white mb-8">Seamless Digital Care. Your Health, Your Way.</h2>
+        </div>
+    </section>
+
+     <section id="about-us-section" class="py-20 px-4 md:px-10 bg-gray-50">
+      <div class="max-w-6xl mx-auto text-center">
+        <!-- Hero banner within the section -->
+        <div class="bg-[#004b7c] text-white p-8 md:p-12 rounded-2xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-8 mb-16">
+            <div class="md:text-left">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Our Vision: Redefining Healthcare</h2>
+                <p class="text-gray-300 max-w-2xl">At DocuCare, we are pioneering a digital health ecosystem built on trust, innovation, and compassion. We believe that managing your well-being should be seamless, accessible, and centered around you.
+                    We're moving away from reactive, fragmented care and toward a proactive, holistic, and integrated approach. Our platform empowers individuals to take control of their health journey, not just when they are sick, but every day.
+                </p>
+            </div>
+            <!--
+                Image dimensions are 300x200.
+                You can replace the 'src' with your image URL.
+            -->
+            <img src="slider1.jpg" alt="Our Vision" width="300" height="200" class="rounded-xl shadow-lg transition duration-300 hover:scale-105">
+        </div>
+      </div>
+     </section>
+
+    <!-- Mission and Technology Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <!-- Our Mission Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col items-center text-center transition duration-300 hover:shadow-2xl hover:scale-105">
+                    <div class="bg-[#eef2f6] text-[#004b7c] p-5 rounded-full mb-6">
+                        <i class="fas fa-hand-holding-heart text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Empowering Health, Digitally.</h3>
+                    <p class="text-gray-600">Our mission is to empower individuals by providing a secure, centralized, and easy-to-use platform for all their health needs. From finding the right doctor to accessing your medical records, we put control back in your hands.
+                     We are shifting the traditional patient-doctor relationship from a passive one to an active partnership. DocuCare provides you with the tools and information to become an informed and proactive participant in your health journey, fostering better communication and collaborative decision-making with your care providers.
+                    </p>
+                </div>
+
+                <!-- Our Technology Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col items-center text-center transition duration-300 hover:shadow-2xl hover:scale-105">
+                    <div class="bg-[#eef2f6] text-[#004b7c] p-5 rounded-full mb-6">
+                        <i class="fas fa-shield-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Secure, Seamless, Smart.</h3>
+                    <p class="text-gray-600">We leverage cutting-edge technology to ensure your health data is always secure and your experience is effortless. Our platform uses advanced encryption and a user-friendly interface to provide a truly integrated and intelligent healthcare journey.
+                       We believe that the technology should fade into the background, leaving you to focus on what matters most: your health. Our intuitive, user-friendly interface is meticulously designed to make every interaction effortless, from scheduling a telemedicine appointment to reviewing lab results. The platform provides a consistent experience across all devices, ensuring you can access your health information anytime, anywhere. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact-section" class="py-20 px-4 md:px-10 bg-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Connect With Us</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-10">Have a question or need to schedule an appointment? Our dedicated team is here to assist you. Contact us through any of the channels below.</p>
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- Contact Item 1 -->
+                <div class="flex-1 min-w-[280px] max-w-[320px] p-8 bg-gray-50 rounded-2xl shadow-lg transition duration-300 hover:shadow-xl hover:scale-105">
+                    <div class="text-[#004b7c] text-4xl mb-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        DocuCare Headquarters<br>
+                        123 Digital Health Lane<br>
+                        Wellness City, DC 12345
+                    </p>
+                </div>
+                <!-- Contact Item 2 -->
+                <div class="flex-1 min-w-[280px] max-w-[320px] p-8 bg-gray-50 rounded-2xl shadow-lg transition duration-300 hover:shadow-xl hover:scale-105">
+                    <div class="text-[#004b7c] text-4xl mb-4">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        General Inquiries: <a href="mailto:info@docucare.com" class="text-[#004b7c] hover:underline">info@docucare.com</a><br>
+                        Support: <a href="mailto:support@docucare.com" class="text-[#004b7c] hover:underline">support@docucare.com</a>
+                    </p>
+                </div>
+                <!-- Contact Item 3 -->
+                <div class="flex-1 min-w-[280px] max-w-[320px] p-8 bg-gray-50 rounded-2xl shadow-lg transition duration-300 hover:shadow-xl hover:scale-105">
+                    <div class="text-[#004b7c] text-4xl mb-4">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Main Office: +1 (555) 123-4567<br>
+                        Support Line: +1 (555) 987-6543<br>
+                        Monday - Friday, 9am - 5pm
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-gray-300 py-6">
+        <div class="max-w-6xl mx-auto px-4 md:px-10 text-sm flex flex-col md:flex-row justify-between items-center flex-wrap gap-4">
+            <span>Welcome to a Professional Health Care</span>
+            <div class="flex items-center gap-4 flex-wrap">
+                <span class="flex items-center gap-1"><i class="fas fa-phone text-blue-400"></i> 010-060-0160</span>
+                <span class="flex items-center gap-1"><i class="fas fa-clock text-blue-400"></i> 6:00 AM - 10:00 PM (Mon-Fri)</span>
+                <span class="flex items-center gap-1"><i class="fas fa-envelope text-blue-400"></i> info@company.com</span>
+            </div>
+        </div>
+        <div class="bg-gray-900 text-gray-500 py-4 text-center text-xs mt-4">
+            &copy; 2025 DocuCare. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        /**
+         * Shows a message to the user in a styled box.
+         * @param {string} message The text to display.
+         * @param {number} duration The duration in milliseconds to show the message.
+         */
+        function showMessage(message, duration = 3000) {
+            const messageBox = document.getElementById('messageBox');
+            messageBox.textContent = message;
+            messageBox.style.display = 'block';
+            setTimeout(() => {
+                messageBox.style.display = 'none';
+            }, duration);
+        }
+
+        let lastScrollY = window.scrollY;
+         const mainHeader = document.querySelector('header');
+
+         window.addEventListener('scroll', () => {
+         const currentScrollY = window.scrollY;
+
+         if (currentScrollY > lastScrollY && currentScrollY > 100) {
+     // Scrolling down → hide header
+         mainHeader.classList.add('-translate-y-full');
+     } else {
+    // Scrolling up → show header
+         mainHeader.classList.remove('-translate-y-full');
+     }
+
+  lastScrollY = currentScrollY;
+});
+
+        // Add event listeners to all other buttons to demonstrate interaction
+        const allButtons = document.querySelectorAll('a');
+        allButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                const href = button.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    return; // Allow the default jump to anchor
+                }
+                event.preventDefault(); 
+                const buttonText = button.textContent.trim();
+                showMessage(`Simulating navigation to ${buttonText}...`);
+            });
+        });
+    </script>
+</body>
+</html>

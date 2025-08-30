@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuCare - Login Portal</title>
+    <!-- Use the Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* General body styling for the font family and background */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+        }
+
+        /* Message box for notifications */
+        .message-box {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease-in-out;
+            display: none;
+            background-color: #fff;
+            color: #333;
+        }
+    </style>
+</head>
+<body class="p-4">
+
+    <!-- Message box for notifications -->
+    <div id="messageBox" class="message-box"></div>
+
+    <div class="w-full max-w-md bg-white p-8 md:p-12 rounded-2xl shadow-2xl">
+    <!-- Back Button -->
+        <button onclick="window.history.back()" class="absolute top-6 left-6 text-gray-500 hover:text-gray-900 transition duration-300 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+        </button>    
+        <div class="text-center mb-10">
+            <h1 class="text-4xl font-extrabold text-gray-800 leading-tight mb-2">Medical Portal</h1>
+            <p class="text-md text-gray-600">Please select your role to continue.</p>
+        </div>
+
+        <nav class="flex flex-col space-y-4">
+            <!-- Admin Login Button -->
+            <a href="admin_login.php" class="relative group block w-full text-center py-4 px-6 bg-[#004b7c] text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-105 overflow-hidden">
+                Admin Login
+                <span class="absolute inset-0 bg-blue-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+            </a>
+
+            <!-- Doctor Login Button -->
+            <a href="doctor_login.php" class="relative group block w-full text-center py-4 px-6 bg-[#004b7c] text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-105 overflow-hidden">
+                Doctor Login
+                <span class="absolute inset-0 bg-blue-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+            </a>
+
+            <!-- Patient Register Button -->
+            <a href="patient_register.php" class="relative group block w-full text-center py-4 px-6 bg-[#41c981] text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-105 overflow-hidden">
+                Patient Register
+                <span class="absolute inset-0 bg-green-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+            </a>
+
+            <!-- Patient Login Button -->
+            <a href="patient_login.php" class="relative group block w-full text-center py-4 px-6 bg-[#41c981] text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-105 overflow-hidden">
+                Patient Login
+                <span class="absolute inset-0 bg-green-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+            </a>
+        </nav>
+    </div>
+
+    <script>
+        /**
+         * Shows a message to the user in a styled box.
+         * @param {string} message The text to display.
+         * @param {number} duration The duration in milliseconds to show the message.
+         */
+        function showMessage(message, duration = 3000) {
+            const messageBox = document.getElementById('messageBox');
+            messageBox.textContent = message;
+            messageBox.style.display = 'block';
+            setTimeout(() => {
+                messageBox.style.display = 'none';
+            }, duration);
+        }
+    </script>
+</body>
+</html>
